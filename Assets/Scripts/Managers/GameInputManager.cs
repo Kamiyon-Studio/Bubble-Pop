@@ -31,7 +31,6 @@ public class GameInputManager : MonoBehaviour {
 
     private void Update() {
         CheckKeyInputHeldDown();
-        Debug.Log(letterPressed);
     }
 
     private void OnDisable() {
