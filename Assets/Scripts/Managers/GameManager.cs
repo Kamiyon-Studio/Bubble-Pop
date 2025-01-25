@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     private State state;
 
     private int Health = 3;
+    private float timer = 60f;
 
     private void Awake() {
         if (Instance == null) {
