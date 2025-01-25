@@ -26,6 +26,7 @@ public class GameInputManager : MonoBehaviour {
 
     private void OnEnable() {
         playerInputActions.Enable();
+
         CreateAlphabetActions();
     }
 

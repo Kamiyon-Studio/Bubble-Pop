@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 
     private enum State {
         WaitingToStart,
+        CountDownToStart,
         GameInProgress,
         GameOver,
     }
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour {
 
     private int Health = 3;
     private float timer = 60f;
+    private float countdownTimer = 3f;
+
+    private bool timeRunning = false;
 
     private void Awake() {
         if (Instance == null) {
@@ -30,10 +34,17 @@ public class GameManager : MonoBehaviour {
         switch (state) {
             case State.WaitingToStart:
                 break;
+            case State.CountDownToStart:
+                break;
             case State.GameInProgress:
                 break;
             case State.GameOver:
                 break;
         }
+    }
+
+    public void DecrementHealth() {
+        Health--;
+        Debug.Log("Health: " + Health);
     }
 }
