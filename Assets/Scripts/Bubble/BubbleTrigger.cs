@@ -11,6 +11,8 @@ public class BubbleTrigger : MonoBehaviour {
 
     private Animator bubbleAnimator;
 
+    private bool hasCollided = false;
+
     private void Awake() {
         bubbleLetterGen = GetComponent<BubbleLetterGen>();
         bubbleAnimator = GetComponent<Animator>();
@@ -37,12 +39,13 @@ public class BubbleTrigger : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.GetComponent<BubbleBoundaryManager>() != null) {
+        if (collision.GetComponent<BubbleBoundaryManager>() != null && !hasCollided) {
             BubbleSpawner.Instance.DecrementBubbleCount();
             GameManager.Instance.DecrementHealth();
             PlayDestroyAnim();
 
             GetComponent<CircleCollider2D>().enabled = false;
+            hasCollided = true;
         }
     }
 

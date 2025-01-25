@@ -35,6 +35,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Space"",
+                    ""type"": ""Button"",
+                    ""id"": ""042998a4-34a0-48f2-b094-5469c18a9647"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""KeyPress"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""79aea1fb-80b4-4eee-8a94-f2ebd27667e1"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Space"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +77,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         // Keyboard
         m_Keyboard = asset.FindActionMap("Keyboard", throwIfNotFound: true);
         m_Keyboard_KeyPress = m_Keyboard.FindAction("KeyPress", throwIfNotFound: true);
+        m_Keyboard_Space = m_Keyboard.FindAction("Space", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -124,11 +145,13 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Keyboard;
     private List<IKeyboardActions> m_KeyboardActionsCallbackInterfaces = new List<IKeyboardActions>();
     private readonly InputAction m_Keyboard_KeyPress;
+    private readonly InputAction m_Keyboard_Space;
     public struct KeyboardActions
     {
         private @PlayerInputActions m_Wrapper;
         public KeyboardActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @KeyPress => m_Wrapper.m_Keyboard_KeyPress;
+        public InputAction @Space => m_Wrapper.m_Keyboard_Space;
         public InputActionMap Get() { return m_Wrapper.m_Keyboard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -141,6 +164,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @KeyPress.started += instance.OnKeyPress;
             @KeyPress.performed += instance.OnKeyPress;
             @KeyPress.canceled += instance.OnKeyPress;
+            @Space.started += instance.OnSpace;
+            @Space.performed += instance.OnSpace;
+            @Space.canceled += instance.OnSpace;
         }
 
         private void UnregisterCallbacks(IKeyboardActions instance)
@@ -148,6 +174,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @KeyPress.started -= instance.OnKeyPress;
             @KeyPress.performed -= instance.OnKeyPress;
             @KeyPress.canceled -= instance.OnKeyPress;
+            @Space.started -= instance.OnSpace;
+            @Space.performed -= instance.OnSpace;
+            @Space.canceled -= instance.OnSpace;
         }
 
         public void RemoveCallbacks(IKeyboardActions instance)
@@ -168,5 +197,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public interface IKeyboardActions
     {
         void OnKeyPress(InputAction.CallbackContext context);
+        void OnSpace(InputAction.CallbackContext context);
     }
 }
