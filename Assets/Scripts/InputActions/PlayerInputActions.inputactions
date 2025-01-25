@@ -1,0 +1,34 @@
+{
+    "name": "PlayerInputActions",
+    "maps": [
+        {
+            "name": "Keyboard",
+            "id": "5c48b318-0ea9-442e-9c84-40fd30563c8c",
+            "actions": [
+                {
+                    "name": "KeyPress",
+                    "type": "Button",
+                    "id": "efb984aa-0019-4c7d-95ee-cfc02be6a98d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c63ae438-46aa-4d1d-b3ef-5ff43fcae40a",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

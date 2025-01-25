@@ -1,0 +1,101 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BubbleSpawner : MonoBehaviour {
+
+    public static BubbleSpawner Instance { get; private set; }
+
+    [SerializeField] private SpawnLocationSO spawnLocation;
+    [SerializeField] private GameObject bubbleContainer;
+    [SerializeField] private BubbleListSO bubbleListSO;
+
+    [SerializeField] private float spawnInterval = 1f;
+
+    private int bubbleCount = 0;
+    private int maxBubbles = 30;
+
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Debug.LogError("BubbleSpawner: There is already a BubbleSpawner in the scene!");
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start() {
+        StartCoroutine(SpawnBubblesInterval());
+    }
+
+    private IEnumerator SpawnBubblesInterval() {
+        while (bubbleCount < maxBubbles) {
+            SpawnBubble();
+            bubbleCount++;
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
+    private void SpawnBubble() {
+        if (spawnLocation.spawnLocation != null) {
+            Transform[] childeTransforms = spawnLocation.spawnLocation.GetComponentsInChildren<Transform>();
+
+            List<Transform> spawnPoints = new List<Transform>();
+            foreach (Transform child in childeTransforms) {
+                if (child != spawnLocation.spawnLocation.transform) {
+                    spawnPoints.Add(child);
+                }
+            }
+
+            if (spawnPoints.Count > 0) {
+                Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+                GameObject selectedBubble = GetRandomBubbleByWeight();
+
+                if (selectedBubble != null) {
+                    Instantiate(selectedBubble, randomSpawnPoint.position, Quaternion.identity, bubbleContainer.transform);
+                }
+            } else {
+                Debug.LogError("BubbleSpawner: No spawn points found!");
+            }
+        } else {
+            Debug.LogError("BubbleSpawner: No spawn location found!");
+        }
+    }
+
+    private GameObject GetRandomBubbleByWeight() {
+        if (bubbleListSO == null || bubbleListSO.bubbleObject == null || bubbleListSO.bubbleObject.Count == 0) {
+            Debug.Log("BubbleSpawner: No bubbles found in the list!");
+            return null;
+        }
+
+        List<float> weights = new List<float> { 50f, 30f, 20f };
+
+        if (weights.Count != bubbleListSO.bubbleObject.Count) {
+            Debug.Log("BubbleSpawner: The number of weights does not match the number of bubbles in the list!");
+            return null;
+        }
+
+        float totalWeight = 0f;
+        foreach (float weight in weights) {
+            totalWeight += weight;
+        }
+
+        float randomValue = Random.Range(0f, totalWeight);
+        float cumulativeWeight = 0f;
+
+        for (int i = 0; i < bubbleListSO.bubbleObject.Count; i++) {
+            cumulativeWeight += weights[i];
+            if (randomValue <= cumulativeWeight) {
+                return bubbleListSO.bubbleObject[i].bubblePrefab;
+            }
+        }
+
+        return null;
+    }
+
+    public void DecrementBubbleCount() {
+        if (bubbleCount > 0) {
+            bubbleCount--;
+        }
+    }
+}
