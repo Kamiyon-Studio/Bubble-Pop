@@ -15,7 +15,7 @@ public class BubbleBoundaryManager : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.GetComponent<BubbleTrigger>() != null) {
             BubbleSpawner.Instance.DecrementBubbleCount();
-            Destroy(collision.gameObject);
+            GameManager.Instance.DecrementHealth();
         }
     }
 }
