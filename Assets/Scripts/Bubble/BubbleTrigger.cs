@@ -44,9 +44,8 @@ public class BubbleTrigger : MonoBehaviour {
         if (collision.GetComponent<BubbleBoundaryManager>() != null && !hasCollided) {
             BubbleSpawner.Instance.DecrementBubbleCount();
             GameManager.Instance.DecrementHealth();
-            bubbleSFX.PlayRandomAudio();
+            
             PlayDestroyAnim();
-
             GetComponent<CircleCollider2D>().enabled = false;
             hasCollided = true;
         }
@@ -56,6 +55,7 @@ public class BubbleTrigger : MonoBehaviour {
     /// Play destroy animation that is used when the bubble popped
     /// </summary>
     private void PlayDestroyAnim() {
+        bubbleSFX.PlayRandomAudio();
         bubbleText.SetActive(false);
         bubbleAnimator.SetTrigger(IS_POPPED);
     }

@@ -1,10 +1,13 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    
+
     public static GameManager Instance { get; private set; }
 
-    private enum State {
+    public event EventHandler OnStateChanged;
+
+    public enum State {
         WaitingToStart,
         CountDownToStart,
         GameInProgress,
@@ -30,14 +33,39 @@ public class GameManager : MonoBehaviour {
         state = State.WaitingToStart;
     }
 
+    private void Start() {
+        GameInputManager.Instance.OnSpacePressed += GameInputManager_OnSpacePressed;
+    }
+
+    private void GameInputManager_OnSpacePressed(object sender, EventArgs e) {
+        if (state == State.WaitingToStart) {
+            state = State.CountDownToStart;
+        }
+    }
+
     private void Update() {
         switch (state) {
             case State.WaitingToStart:
                 break;
+
             case State.CountDownToStart:
+                Debug.Log("State: CountDownToStart");
+                countdownTimer -= Time.deltaTime;
+                if (countdownTimer <= 0f) {
+                    state = State.GameInProgress;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
+                }
                 break;
+
             case State.GameInProgress:
+                timer -= Time.deltaTime;
+                if (timer <= 0f) {
+                    Debug.Log("State: GameInProgress");
+                    state = State.GameOver;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
+                }
                 break;
+
             case State.GameOver:
                 break;
         }
@@ -45,6 +73,21 @@ public class GameManager : MonoBehaviour {
 
     public void DecrementHealth() {
         Health--;
-        Debug.Log("Health: " + Health);
+    }
+
+    public bool IsWaitingToStart() {
+        return state == State.WaitingToStart;
+    }
+
+    public bool IsCountDownToStart() {
+        return state == State.CountDownToStart;
+    }
+
+    public bool IsGameInProgress() {
+        return state == State.GameInProgress;
+    }
+
+    public bool IsGameOver() {
+        return state == State.GameOver;
     }
 }
