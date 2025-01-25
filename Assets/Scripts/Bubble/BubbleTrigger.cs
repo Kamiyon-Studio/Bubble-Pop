@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class BubbleTrigger : MonoBehaviour {
 
-    private char letter = 'E';
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (IsMouseOverCollider()) {
-            Debug.Log("Mouse clicked inside the collider!");
-        }
+    [SerializeField] private BubbleSO BubbleSO;
+    private BubbleLetterGen bubbleLetterGen;
+
+    private void Awake() {
+        bubbleLetterGen = GetComponent<BubbleLetterGen>();
     }
 
     private bool IsMouseOverCollider() {
@@ -16,11 +16,13 @@ public class BubbleTrigger : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)) {
             if (IsMouseOverCollider()) {
-                if (GameInputManager.Instance.GetLetterPressed() == letter) {
-                    Debug.Log("Mouse clicked inside the collider!");
+                if (GameInputManager.Instance.GetLetterPressed() == bubbleLetterGen.GetLetter()) {
+                    BubbleSpawner.Instance.DecrementBubbleCount();
+                    ScoreManager.Instance.IncrementGameScore(BubbleSO.scoreCount);
+                    ScoreManager.Instance.IncrementBubblePopped();
+                    Destroy(gameObject);
                 }
             }
         }
