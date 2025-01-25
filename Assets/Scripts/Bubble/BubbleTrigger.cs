@@ -10,12 +10,14 @@ public class BubbleTrigger : MonoBehaviour {
     private BubbleLetterGen bubbleLetterGen;
 
     private Animator bubbleAnimator;
+    private BubbleSFX bubbleSFX;
 
     private bool hasCollided = false;
 
     private void Awake() {
         bubbleLetterGen = GetComponent<BubbleLetterGen>();
         bubbleAnimator = GetComponent<Animator>();
+        bubbleSFX = GetComponent<BubbleSFX>();
     }
 
     private bool IsMouseOverCollider() {
@@ -42,6 +44,7 @@ public class BubbleTrigger : MonoBehaviour {
         if (collision.GetComponent<BubbleBoundaryManager>() != null && !hasCollided) {
             BubbleSpawner.Instance.DecrementBubbleCount();
             GameManager.Instance.DecrementHealth();
+            bubbleSFX.PlayRandomAudio();
             PlayDestroyAnim();
 
             GetComponent<CircleCollider2D>().enabled = false;

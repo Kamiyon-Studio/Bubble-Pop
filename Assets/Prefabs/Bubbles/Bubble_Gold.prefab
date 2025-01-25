@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8527817133465581609}
   - component: {fileID: 8242847743746637900}
   - component: {fileID: 6915912895262811171}
+  - component: {fileID: 3972672379707111216}
   m_Layer: 0
   m_Name: Bubble_Gold
   m_TagString: Untagged
@@ -366,6 +367,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3972672379707111216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657502586013025382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c4c69fee19d274ca6a596e6f28dd97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleSFXListSO: {fileID: 11400000, guid: 73a3ac85574b8bc459988180ca342e7a, type: 2}
 --- !u!1 &3140161116191948605
 GameObject:
   m_ObjectHideFlags: 0
