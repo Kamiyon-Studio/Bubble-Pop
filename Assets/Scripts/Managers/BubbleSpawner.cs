@@ -25,7 +25,13 @@ public class BubbleSpawner : MonoBehaviour {
     }
 
     private void Start() {
-        StartCoroutine(SpawnBubblesInterval());
+        GameManager.Instance.OnStateChanged += GameManager_OnStateChanged;
+    }
+
+    private void GameManager_OnStateChanged(object sender, System.EventArgs e) {
+        if (GameManager.Instance.IsGameInProgress()) {
+            StartCoroutine(SpawnBubblesInterval());
+        }
     }
 
     private IEnumerator SpawnBubblesInterval() {

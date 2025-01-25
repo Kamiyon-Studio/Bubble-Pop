@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
@@ -7,11 +8,13 @@ public class GameInputManager : MonoBehaviour {
 
     public static GameInputManager Instance { get; private set; }
 
+    public event EventHandler OnSpacePressed;
+
     private PlayerInputActions playerInputActions;
+    private Dictionary<Key, InputAction> keyActions = new Dictionary<Key, InputAction>();
 
     private char letterPressed;
 
-    private Dictionary<Key, InputAction> keyActions = new Dictionary<Key, InputAction>();
 
     private void Awake() {
         if (Instance == null) {
@@ -27,8 +30,10 @@ public class GameInputManager : MonoBehaviour {
     private void OnEnable() {
         playerInputActions.Enable();
 
+        playerInputActions.Keyboard.Space.performed += ctx => { OnSpacePressed?.Invoke(this, EventArgs.Empty); };
         CreateAlphabetActions();
     }
+
 
     private void Update() {
         CheckKeyInputHeldDown();

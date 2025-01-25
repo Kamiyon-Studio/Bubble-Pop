@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6ae04e80c2098cd4489a7d5619ff56c4
+guid: e3342cc3e5931254793d6942643d225e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2923260425193827389
-    second: btn_newgame_hover_0
-  - first:
-      213: 3860270096395826172
-    second: btn_newgame_hover_1
+      213: 5174614474641644368
+    second: creditsBtnNormal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: btn_newgame_hover_0
+      name: creditsBtnNormal_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 121
-        height: 66
+        width: 369
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3ca2ad5ed1819820800000000000000
-      internalID: 2923260425193827389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: btn_newgame_hover_1
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 0
-        width: 154
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf37cb8333f629530800000000000000
-      internalID: 3860270096395826172
+      spriteID: 05b1c9ac27cefc740800000000000000
+      internalID: 5174614474641644368
       vertices: []
       indices: 
       edges: []
@@ -185,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      creditsBtnNormal_0: 5174614474641644368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

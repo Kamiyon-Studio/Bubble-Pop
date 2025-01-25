@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: ccef3d0fe2256054cb81a5707d01dca2
+guid: 94f3aa1f16cf82b418feb32fc2ff1c54
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6311264794717845941
-    second: btn_option_pressed_0
+      213: 2877554508130491902
+    second: newgameBtnPressed_0
   - first:
-      213: 7095123845045154192
-    second: btn_option_pressed_1
+      213: 7160857789761495954
+    second: newgameBtnPressed_1
   - first:
-      213: -8922419832685453239
-    second: btn_option_pressed_2
+      213: -7302687033786896013
+    second: newgameBtnPressed_2
   - first:
-      213: -519871388549049813
-    second: btn_option_pressed_3
+      213: -1185826389012781482
+    second: newgameBtnPressed_3
   - first:
-      213: -6805002066300003984
-    second: btn_option_pressed_4
+      213: 232176523146547354
+    second: newgameBtnPressed_4
   - first:
-      213: 7162492369545954897
-    second: btn_option_pressed_5
+      213: -7029841539907167309
+    second: newgameBtnPressed_5
+  - first:
+      213: -5021854231757412572
+    second: newgameBtnPressed_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -141,13 +144,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: btn_option_pressed_0
+      name: newgameBtnPressed_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 6
-        width: 32
-        height: 52
+        x: 5
+        y: 9
+        width: 63
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b460a639b12e968a0800000000000000
-      internalID: -6311264794717845941
+      spriteID: efd11f644902fe720800000000000000
+      internalID: 2877554508130491902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: btn_option_pressed_1
+      name: newgameBtnPressed_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 6
-        width: 32
-        height: 52
+        x: 69
+        y: 9
+        width: 63
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 091f155ab81f67260800000000000000
-      internalID: 7095123845045154192
+      spriteID: 293a2dd483a706360800000000000000
+      internalID: 7160857789761495954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: btn_option_pressed_2
+      name: newgameBtnPressed_2
       rect:
         serializedVersion: 2
-        x: 73
-        y: 6
-        width: 32
-        height: 52
+        x: 132
+        y: 9
+        width: 63
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94022e76f623d2480800000000000000
-      internalID: -8922419832685453239
+      spriteID: 371f74585d4a7aa90800000000000000
+      internalID: -7302687033786896013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: btn_option_pressed_3
+      name: newgameBtnPressed_3
       rect:
         serializedVersion: 2
-        x: 108
-        y: 6
-        width: 32
-        height: 52
+        x: 267
+        y: 9
+        width: 63
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2215acf9bb09c8f0800000000000000
-      internalID: -519871388549049813
+      spriteID: 656eb959e291b8fe0800000000000000
+      internalID: -1185826389012781482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: btn_option_pressed_4
+      name: newgameBtnPressed_4
       rect:
         serializedVersion: 2
-        x: 143
-        y: 6
-        width: 32
-        height: 52
+        x: 331
+        y: 9
+        width: 63
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0799366dca6cf81a0800000000000000
-      internalID: -6805002066300003984
+      spriteID: a90d553515bd83300800000000000000
+      internalID: 232176523146547354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: btn_option_pressed_5
+      name: newgameBtnPressed_5
       rect:
         serializedVersion: 2
-        x: 178
-        y: 6
-        width: 37
-        height: 52
+        x: 395
+        y: 9
+        width: 63
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +269,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1568b319cd8466360800000000000000
-      internalID: 7162492369545954897
+      spriteID: 3bb5c8a7d5cf07e90800000000000000
+      internalID: -7029841539907167309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newgameBtnPressed_6
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 9
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 427ae42ee2ace4ab0800000000000000
+      internalID: -5021854231757412572
       vertices: []
       indices: 
       edges: []
@@ -285,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      newgameBtnPressed_0: 2877554508130491902
+      newgameBtnPressed_1: 7160857789761495954
+      newgameBtnPressed_2: -7302687033786896013
+      newgameBtnPressed_3: -1185826389012781482
+      newgameBtnPressed_4: 232176523146547354
+      newgameBtnPressed_5: -7029841539907167309
+      newgameBtnPressed_6: -5021854231757412572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
