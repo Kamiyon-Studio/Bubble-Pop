@@ -38,7 +38,11 @@ public class BubbleTrigger : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.GetComponent<BubbleBoundaryManager>() != null) {
+            BubbleSpawner.Instance.DecrementBubbleCount();
+            GameManager.Instance.DecrementHealth();
             PlayDestroyAnim();
+
+            GetComponent<CircleCollider2D>().enabled = false;
         }
     }
 
