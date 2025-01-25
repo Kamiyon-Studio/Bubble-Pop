@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      newgameBtnHover_0: -3595558383409963431
+      newgameBtnHover_1: 8100928047559218466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
