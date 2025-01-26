@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _upwardSpeed: 3.5
   _sidewaysSpeed: 3
-  _sidewaysChangeInterval: 3
+  _sidewaysChangeInterval: 1
 --- !u!114 &3972672379707111216
 MonoBehaviour:
   m_ObjectHideFlags: 0
