@@ -804,7 +804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &650420469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1509,9 +1509,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e622f083c95874b8742c04576e8ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playButton: {fileID: 0}
-  creditsButton: {fileID: 0}
-  quitButton: {fileID: 0}
+  playButton: {fileID: 1189091499}
+  creditsButton: {fileID: 931633079}
+  quitButton: {fileID: 1245140201}
 --- !u!1 &1569892298
 GameObject:
   m_ObjectHideFlags: 0
