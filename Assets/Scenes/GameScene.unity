@@ -2961,6 +2961,7 @@ MonoBehaviour:
   pressStartUI: {fileID: 939551204}
   countDownUI: {fileID: 485039672}
   BottomUIPanel: {fileID: 2042535872}
+  gameOverUI: {fileID: 2036617874}
   poppedBubbleCounterText: {fileID: 1081580449}
   scoreCounterText: {fileID: 33925976}
   timerCounterText: {fileID: 445802053}
