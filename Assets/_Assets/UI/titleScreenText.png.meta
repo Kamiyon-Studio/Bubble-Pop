@@ -1,10 +1,43 @@
 fileFormatVersion: 2
-guid: 89629451e06d49c4a8aa268caea21800
+guid: f4d5bfdc4c319214e94dc3bef813704e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2952677872857339231
-    second: titleSpritesheet_0
+      213: 3600734993665676299
+    second: titleScreenText_0
+  - first:
+      213: 909854103591789257
+    second: titleScreenText_1
+  - first:
+      213: -4722695831004260826
+    second: titleScreenText_2
+  - first:
+      213: -1953827742588045524
+    second: titleScreenText_3
+  - first:
+      213: 438159593643789406
+    second: titleScreenText_4
+  - first:
+      213: 8707845320232032042
+    second: titleScreenText_5
+  - first:
+      213: -6745736812491409500
+    second: titleScreenText_6
+  - first:
+      213: 5142134518610577000
+    second: titleScreenText_7
+  - first:
+      213: 4942275578073849506
+    second: titleScreenText_8
+  - first:
+      213: -2951578698319827626
+    second: titleScreenText_9
+  - first:
+      213: -3017063357525795614
+    second: titleScreenText_10
+  - first:
+      213: -6767699325625641254
+    second: titleScreenText_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +79,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,43 +129,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: titleSpritesheet_0
+      name: titleScreenText_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1172
-        height: 413
+        x: 3
+        y: 203
+        width: 135
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,250 +148,250 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1aaae2c5e1bf507d0800000000000000
-      internalID: -2952677872857339231
+      spriteID: b04d2c3366168f130800000000000000
+      internalID: 3600734993665676299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_1
+      name: titleScreenText_1
       rect:
         serializedVersion: 2
-        x: 1172
-        y: 0
-        width: 1172
-        height: 413
+        x: 135
+        y: 203
+        width: 280
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6973d09b228682043912e70be80e0c9d
-      internalID: -290170979
+      spriteID: 9c225029c7370ac00800000000000000
+      internalID: 909854103591789257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_2
+      name: titleScreenText_2
       rect:
         serializedVersion: 2
-        x: 2344
-        y: 0
-        width: 1172
-        height: 413
+        x: 414
+        y: 203
+        width: 153
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dae637d11c828a343b28cc24839500d5
-      internalID: 833204775
+      spriteID: 626d5c2e92d957eb0800000000000000
+      internalID: -4722695831004260826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_3
+      name: titleScreenText_3
       rect:
         serializedVersion: 2
-        x: 3516
-        y: 0
-        width: 1172
-        height: 413
+        x: 566
+        y: 203
+        width: 139
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 546ed3a989142cf4185d8f290943eb25
-      internalID: 363146084
+      spriteID: c277cba150c92e4e0800000000000000
+      internalID: -1953827742588045524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_4
+      name: titleScreenText_4
       rect:
         serializedVersion: 2
-        x: 4688
-        y: 0
-        width: 1172
-        height: 413
+        x: 703
+        y: 203
+        width: 155
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1951b2fda79dd964399e24502f9e5102
-      internalID: 1187234234
+      spriteID: e5c411634d7a41600800000000000000
+      internalID: 438159593643789406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_5
+      name: titleScreenText_5
       rect:
         serializedVersion: 2
-        x: 5860
-        y: 0
-        width: 1172
-        height: 413
+        x: 858
+        y: 203
+        width: 175
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c5aefae811577cc4ea08d3c95d3407a1
-      internalID: -1154545122
+      spriteID: a275a7fbe2b78d870800000000000000
+      internalID: 8707845320232032042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_6
+      name: titleScreenText_6
       rect:
         serializedVersion: 2
-        x: 7032
-        y: 0
-        width: 1172
-        height: 413
+        x: 231
+        y: 3
+        width: 129
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6119149b2b2e5fd4f97d06d5af119e4d
-      internalID: -1900024899
+      spriteID: 4a77c270c145262a0800000000000000
+      internalID: -6745736812491409500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_7
+      name: titleScreenText_7
       rect:
         serializedVersion: 2
-        x: 8204
-        y: 0
-        width: 1172
-        height: 413
+        x: 358
+        y: 3
+        width: 76
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 79d7488983ba86f44aa0a2c6b6e69067
-      internalID: 2078213212
+      spriteID: 866ce09b9188c5740800000000000000
+      internalID: 5142134518610577000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_8
+      name: titleScreenText_8
       rect:
         serializedVersion: 2
-        x: 9376
-        y: 0
-        width: 1172
-        height: 413
+        x: 435
+        y: 3
+        width: 185
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: eb197af3f4eb4574098ec7716b319161
-      internalID: -1309048777
+      spriteID: 2ae1e25f37d769440800000000000000
+      internalID: 4942275578073849506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_9
+      name: titleScreenText_9
       rect:
         serializedVersion: 2
-        x: 10548
-        y: 0
-        width: 1172
-        height: 413
+        x: 621
+        y: 3
+        width: 151
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2471ccfe4b27e0647a7f0ce232afe8b8
-      internalID: -798576802
+      spriteID: 65d6900efc2e907d0800000000000000
+      internalID: -2951578698319827626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_10
+      name: titleScreenText_10
       rect:
         serializedVersion: 2
-        x: 11720
-        y: 0
-        width: 1172
-        height: 413
+        x: 784
+        y: 72
+        width: 18
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d56abc047813c8e4da51e39e71916bc1
-      internalID: -883227624
+      spriteID: 2ecd3d58cdc3126d0800000000000000
+      internalID: -3017063357525795614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: titleSpritesheet_11
+      name: titleScreenText_11
       rect:
         serializedVersion: 2
-        x: 12892
-        y: 0
-        width: 1172
-        height: 413
+        x: 783
+        y: 42
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c3faf2844bfa40a4c98999fc7d2f4c0f
-      internalID: -274803421
+      spriteID: ad6de65f15d4412a0800000000000000
+      internalID: -6767699325625641254
       vertices: []
       indices: 
       edges: []
@@ -393,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 83492d8a81d56ed42b3eecf107017603
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -403,18 +410,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      titleSpritesheet_0: -2952677872857339231
-      titleSpritesheet_1: -290170979
-      titleSpritesheet_10: -883227624
-      titleSpritesheet_11: -274803421
-      titleSpritesheet_2: 833204775
-      titleSpritesheet_3: 363146084
-      titleSpritesheet_4: 1187234234
-      titleSpritesheet_5: -1154545122
-      titleSpritesheet_6: -1900024899
-      titleSpritesheet_7: 2078213212
-      titleSpritesheet_8: -1309048777
-      titleSpritesheet_9: -798576802
+      titleScreenText_0: 3600734993665676299
+      titleScreenText_1: 909854103591789257
+      titleScreenText_10: -3017063357525795614
+      titleScreenText_11: -6767699325625641254
+      titleScreenText_2: -4722695831004260826
+      titleScreenText_3: -1953827742588045524
+      titleScreenText_4: 438159593643789406
+      titleScreenText_5: 8707845320232032042
+      titleScreenText_6: -6745736812491409500
+      titleScreenText_7: 5142134518610577000
+      titleScreenText_8: 4942275578073849506
+      titleScreenText_9: -2951578698319827626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
