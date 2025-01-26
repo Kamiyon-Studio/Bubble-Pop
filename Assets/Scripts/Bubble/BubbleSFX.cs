@@ -16,4 +16,8 @@ public class BubbleSFX : MonoBehaviour
         audioSource.PlayOneShot(randomClip);
 
     }
+
+    public void MuteAudioSource() {
+        audioSource.mute = true;
+    }
 }
