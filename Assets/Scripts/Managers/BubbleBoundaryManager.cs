@@ -1,6 +1,10 @@
 using UnityEngine;
 
 public class BubbleBoundaryManager : MonoBehaviour {
+/// <summary>
+/// Base class used by the bubble trigger to detect if the bubble has collided with the bubble boundary
+/// </summary>
+/// 
     public static BubbleBoundaryManager Instance { get; private set; }
 
     private void Awake() {
@@ -9,12 +13,6 @@ public class BubbleBoundaryManager : MonoBehaviour {
         } else {
             Debug.LogError("BubbleBoundaryManager: There is already a BubbleBoundaryManager in the scene!");
             Destroy(gameObject);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.GetComponent<BubbleTrigger>() != null) {
-            
         }
     }
 }

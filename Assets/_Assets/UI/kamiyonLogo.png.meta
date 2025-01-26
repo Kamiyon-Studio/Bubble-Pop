@@ -360,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kamiyonLogo_0: -6512660748325661175
+      kamiyonLogo_1: -8516864726869279391
+      kamiyonLogo_2: -5805212170103604639
+      kamiyonLogo_3: 2431219891030997184
+      kamiyonLogo_4: -5443945096715490538
+      kamiyonLogo_5: 8837772411389927781
+      kamiyonLogo_6: -5365868912638023754
+      kamiyonLogo_7: -7848462839080006865
+      kamiyonLogo_8: -8127242747828450125
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

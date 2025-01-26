@@ -28,6 +28,9 @@ public class UIManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Initialize event listeners needed for the UI activation
+    /// </summary>
     private void Start() {
         ScoreManager.Instance.OnBubblePopped += ScoreManager_OnBubblePopped;
         GameManager.Instance.OnStateChanged += GameManager_OnStateChanged;
@@ -36,6 +39,11 @@ public class UIManager : MonoBehaviour {
         EnablePressStartUI();
     }
 
+    /// <summary>
+    /// Enable and disable UI elements
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void GameManager_OnStateChanged(object sender, System.EventArgs e) {
         EnablePressStartUI();
         EnableCountDownUI();
@@ -86,10 +94,16 @@ public class UIManager : MonoBehaviour {
         UpdateScoreCounterText();
     }
 
+    /// <summary>
+    /// Popped Bubble Counter UI and update score text during gameplay
+    /// </summary>
     private void UpdatePoppedBubbleCounterText() {
         poppedBubbleCounterText.text = " x " + ScoreManager.Instance.GetBubblePopped().ToString();
     }
 
+    /// <summary>
+    /// Score Counter UI and update score text during gameplay
+    /// </summary>
     private void UpdateScoreCounterText() {
         scoreCounterText.text = ScoreManager.Instance.GetGameScore().ToString();
     }

@@ -19,19 +19,34 @@ public class ScoreManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Increment the number of bubbles popped.
+    /// </summary>
     public void IncrementBubblePopped() {
         bubblePopped++;
         OnBubblePopped?.Invoke(this, EventArgs.Empty);
     }
 
+    /// <summary>
+    /// Increment the game score
+    /// </summary>
+    /// <param name="score"></param>
     public void IncrementGameScore(int score) {
         gameScore += score;
     }
 
+    /// <summary>
+    /// Get the number of bubbles popped
+    /// </summary>
+    /// <returns> The number of bubbles popped</returns>
     public int GetBubblePopped() {
         return bubblePopped;
     }
 
+    /// <summary>
+    /// Get the game score
+    /// </summary>
+    /// <returns> The game score</returns>
     public int GetGameScore() {
         return gameScore;
     }

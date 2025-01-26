@@ -14,12 +14,20 @@ public class BubbleTrigger : MonoBehaviour {
 
     private bool hasCollided = false;
 
+    /// <summary>
+    /// Get the components needed for the bubble
+    /// </summary>
     private void Awake() {
         bubbleLetterGen = GetComponent<BubbleLetterGen>();
         bubbleAnimator = GetComponent<Animator>();
         bubbleSFX = GetComponent<BubbleSFX>();
     }
 
+    /// <summary>
+    /// Checks if the mouse is over the collider of the bubble trigger
+    /// and if the letter of the bubble trigger matches the letter of the mouse
+    /// </summary>
+    /// <returns></returns>
     private bool IsMouseOverCollider() {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -27,6 +35,14 @@ public class BubbleTrigger : MonoBehaviour {
     }
 
     private void Update() {
+        PopBubble();
+    }
+
+    /// <summary>
+    /// Checks if the mouse is clicked and if the letter of the bubble matches the letter of the mouse
+    /// pops the bubble
+    /// </summary>
+    private void PopBubble() {
         if (GameManager.Instance.IsGameInProgress()) {
             if (Input.GetMouseButtonDown(0)) {
                 if (IsMouseOverCollider()) {
@@ -45,6 +61,10 @@ public class BubbleTrigger : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Checks if the bubble has collided with the bubble boundary
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.GetComponent<BubbleBoundaryManager>() != null && !hasCollided) {
             BubbleSpawner.Instance.DecrementBubbleCount();
@@ -65,6 +85,9 @@ public class BubbleTrigger : MonoBehaviour {
         bubbleAnimator.SetTrigger(IS_POPPED);
     }
 
+    /// <summary>
+    /// Destroys the bubble
+    /// </summary>
     public void DestroyBubble() {
         Destroy(gameObject);
     }

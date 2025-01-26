@@ -43,6 +43,9 @@ public class GameInputManager : MonoBehaviour {
         playerInputActions.Disable();
     }
 
+    /// <summary>
+    /// Checks if a key is being held down
+    /// </summary>
     private void CheckKeyInputHeldDown() {
         bool isLetterPressed = false;
 
@@ -60,6 +63,9 @@ public class GameInputManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Creates a new InputAction for each letter in the alphabet
+    /// </summary>
     private void CreateAlphabetActions() {
         for (char letter = 'A'; letter <= 'Z'; letter++) {
             var key = (Key)System.Enum.Parse(typeof(Key), letter.ToString());

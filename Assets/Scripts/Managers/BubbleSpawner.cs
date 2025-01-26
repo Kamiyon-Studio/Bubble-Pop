@@ -31,7 +31,12 @@ public class BubbleSpawner : MonoBehaviour {
     private void Update() {
         UpdateSpawnInterval();
     }
-
+    
+    /// <summary>
+    /// Starts the game by setting the state to CountDownToStart
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void GameManager_OnStateChanged(object sender, System.EventArgs e) {
         if (GameManager.Instance.IsGameInProgress()) {
             StartCoroutine(SpawnBubblesInterval());
@@ -40,6 +45,10 @@ public class BubbleSpawner : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Spawns bubbles at regular intervals
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator SpawnBubblesInterval() {
         while (bubbleCount < maxBubbles) {
             SpawnBubble();
@@ -48,6 +57,9 @@ public class BubbleSpawner : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Spawns a bubble at a random spawn point in the scene
+    /// </summary>
     private void SpawnBubble() {
         if (spawnLocation.spawnLocation != null) {
             Transform[] childeTransforms = spawnLocation.spawnLocation.GetComponentsInChildren<Transform>();
@@ -74,6 +86,10 @@ public class BubbleSpawner : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Returns a random bubble type from the list
+    /// </summary>
+    /// <returns></returns>
     private GameObject GetRandomBubbleByWeight() {
         if (bubbleListSO == null || bubbleListSO.bubbleObject == null || bubbleListSO.bubbleObject.Count == 0) {
             Debug.Log("BubbleSpawner: No bubbles found in the list!");
@@ -105,6 +121,9 @@ public class BubbleSpawner : MonoBehaviour {
         return null;
     }
 
+    /// <summary>
+    /// Updates the spawn interval based on the game timer
+    /// </summary>
     private void UpdateSpawnInterval() {
         if (GameManager.Instance.IsGameInProgress()) {
             float currentTimer = GameManager.Instance.GetGameTimer();
@@ -123,6 +142,9 @@ public class BubbleSpawner : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Decrements the bubble count
+    /// </summary>
     public void DecrementBubbleCount() {
         if (bubbleCount > 0) {
             bubbleCount--;
