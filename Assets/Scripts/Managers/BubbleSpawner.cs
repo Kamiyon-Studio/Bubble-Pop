@@ -138,6 +138,8 @@ public class BubbleSpawner : MonoBehaviour {
                 spawnInterval = 1.3f;
             } else if (currentTimer > 10f && currentTimer <= 20f) {
                 spawnInterval = 1f;
+            } else if (currentTimer > 0f && currentTimer <= 10f) {
+                spawnInterval = 0.8f;
             }
         }
     }
