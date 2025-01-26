@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
 
     private int Health = 3;
     private float gameTimer = 60f;
-    private float countdownTimer = 3f;
+    private float countdownTimer = 4f;
 
     private bool timeRunning = false;
 
@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour {
     private void GameInputManager_OnSpacePressed(object sender, EventArgs e) {
         if (state == State.WaitingToStart) {
             state = State.CountDownToStart;
+            OnStateChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour {
 
             case State.CountDownToStart:
                 Debug.Log("State: CountDownToStart");
+
                 countdownTimer -= Time.deltaTime;
                 if (countdownTimer <= 0f) {
                     state = State.GameInProgress;
@@ -60,8 +62,8 @@ public class GameManager : MonoBehaviour {
 
             case State.GameInProgress:
                 Debug.Log("State: GameInProgress");
-                gameTimer -= Time.deltaTime;
 
+                gameTimer -= Time.deltaTime;
                 if (gameTimer <= 0f) {
                     state = State.GameOver;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
