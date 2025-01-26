@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 414751178784758713}
   - component: {fileID: 8527817133465581609}
   - component: {fileID: 8242847743746637900}
-  - component: {fileID: 6915912895262811171}
   - component: {fileID: 3972672379707111216}
+  - component: {fileID: 6915912895262811171}
   m_Layer: 0
   m_Name: Bubble_Gold
   m_TagString: Untagged
@@ -270,6 +270,19 @@ MonoBehaviour:
   _upwardSpeed: 3
   _sidewaysSpeed: 2
   _sidewaysChangeInterval: 2
+--- !u!114 &3972672379707111216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657502586013025382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c4c69fee19d274ca6a596e6f28dd97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleSFXListSO: {fileID: 11400000, guid: 73a3ac85574b8bc459988180ca342e7a, type: 2}
 --- !u!82 &6915912895262811171
 AudioSource:
   m_ObjectHideFlags: 0
@@ -367,19 +380,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3972672379707111216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657502586013025382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48c4c69fee19d274ca6a596e6f28dd97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubbleSFXListSO: {fileID: 11400000, guid: 73a3ac85574b8bc459988180ca342e7a, type: 2}
 --- !u!1 &3140161116191948605
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,8 +549,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '?'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 939d122546a052f4a8c381cc055e3641, type: 2}
+  m_sharedMaterial: {fileID: -4276737686980984921, guid: 939d122546a052f4a8c381cc055e3641, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -574,8 +574,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.6
-  m_fontSizeBase: 0.6
+  m_fontSize: 1
+  m_fontSizeBase: 1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
