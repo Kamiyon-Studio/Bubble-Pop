@@ -1,28 +1,34 @@
 fileFormatVersion: 2
-guid: 94f3aa1f16cf82b418feb32fc2ff1c54
+guid: 99f991dbbb31dc24388a28cb3cea7c6b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2877554508130491902
-    second: newgameBtnPressed_0
+      213: -6512660748325661175
+    second: kamiyonLogo_0
   - first:
-      213: 7160857789761495954
-    second: newgameBtnPressed_1
+      213: -8516864726869279391
+    second: kamiyonLogo_1
   - first:
-      213: -7302687033786896013
-    second: newgameBtnPressed_2
+      213: -5805212170103604639
+    second: kamiyonLogo_2
   - first:
-      213: -1185826389012781482
-    second: newgameBtnPressed_3
+      213: 2431219891030997184
+    second: kamiyonLogo_3
   - first:
-      213: 232176523146547354
-    second: newgameBtnPressed_4
+      213: -5443945096715490538
+    second: kamiyonLogo_4
   - first:
-      213: -7029841539907167309
-    second: newgameBtnPressed_5
+      213: 8837772411389927781
+    second: kamiyonLogo_5
   - first:
-      213: -5021854231757412572
-    second: newgameBtnPressed_6
+      213: -5365868912638023754
+    second: kamiyonLogo_6
+  - first:
+      213: -7848462839080006865
+    second: kamiyonLogo_7
+  - first:
+      213: -8127242747828450125
+    second: kamiyonLogo_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,43 +120,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: newgameBtnPressed_0
+      name: kamiyonLogo_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 9
-        width: 63
-        height: 77
+        x: 144
+        y: 228
+        width: 514
+        height: 519
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efd11f644902fe720800000000000000
-      internalID: 2877554508130491902
+      spriteID: 9065b611e816e95a0800000000000000
+      internalID: -6512660748325661175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newgameBtnPressed_1
+      name: kamiyonLogo_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 9
-        width: 63
-        height: 77
+        x: 153
+        y: 116
+        width: 102
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 293a2dd483a706360800000000000000
-      internalID: 7160857789761495954
+      spriteID: 16df6eab7a40ec980800000000000000
+      internalID: -8516864726869279391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newgameBtnPressed_2
+      name: kamiyonLogo_2
       rect:
         serializedVersion: 2
-        x: 132
-        y: 9
-        width: 63
-        height: 77
+        x: 237
+        y: 116
+        width: 76
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 371f74585d4a7aa90800000000000000
-      internalID: -7302687033786896013
+      spriteID: 16a3333e94ebf6fa0800000000000000
+      internalID: -5805212170103604639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newgameBtnPressed_3
+      name: kamiyonLogo_3
       rect:
         serializedVersion: 2
-        x: 267
-        y: 9
-        width: 63
-        height: 77
+        x: 307
+        y: 116
+        width: 90
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 656eb959e291b8fe0800000000000000
-      internalID: -1185826389012781482
+      spriteID: 0c834c71c9d6db120800000000000000
+      internalID: 2431219891030997184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newgameBtnPressed_4
+      name: kamiyonLogo_4
       rect:
         serializedVersion: 2
-        x: 331
-        y: 9
-        width: 63
-        height: 77
+        x: 394
+        y: 116
+        width: 34
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a90d553515bd83300800000000000000
-      internalID: 232176523146547354
+      spriteID: 61b2b8d17c83374b0800000000000000
+      internalID: -5443945096715490538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newgameBtnPressed_5
+      name: kamiyonLogo_5
       rect:
         serializedVersion: 2
-        x: 395
-        y: 9
-        width: 63
-        height: 77
+        x: 407
+        y: 173
+        width: 28
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3bb5c8a7d5cf07e90800000000000000
-      internalID: -7029841539907167309
+      spriteID: 561e4a20f2316aa70800000000000000
+      internalID: 8837772411389927781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newgameBtnPressed_6
+      name: kamiyonLogo_6
       rect:
         serializedVersion: 2
-        x: 459
-        y: 9
-        width: 62
-        height: 77
+        x: 425
+        y: 93
+        width: 76
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,8 +271,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 427ae42ee2ace4ab0800000000000000
-      internalID: -5021854231757412572
+      spriteID: 6b726ee47aa9885b0800000000000000
+      internalID: -5365868912638023754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kamiyonLogo_7
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 116
+        width: 75
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b48cb71a8a41390800000000000000
+      internalID: -7848462839080006865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kamiyonLogo_8
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 116
+        width: 76
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bcc054e7cb363f80800000000000000
+      internalID: -8127242747828450125
       vertices: []
       indices: 
       edges: []
@@ -301,7 +325,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -310,14 +334,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      newgameBtnPressed_0: 2877554508130491902
-      newgameBtnPressed_1: 7160857789761495954
-      newgameBtnPressed_2: -7302687033786896013
-      newgameBtnPressed_3: -1185826389012781482
-      newgameBtnPressed_4: 232176523146547354
-      newgameBtnPressed_5: -7029841539907167309
-      newgameBtnPressed_6: -5021854231757412572
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
