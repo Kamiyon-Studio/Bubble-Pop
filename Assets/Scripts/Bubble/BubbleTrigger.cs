@@ -27,16 +27,20 @@ public class BubbleTrigger : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            if (IsMouseOverCollider()) {
-                if (GameInputManager.Instance.GetLetterPressed() == bubbleLetterGen.GetLetter()) {
-                    BubbleSpawner.Instance.DecrementBubbleCount();
-                    ScoreManager.Instance.IncrementGameScore(BubbleSO.scoreCount);
-                    ScoreManager.Instance.IncrementBubblePopped();
+        if (GameManager.Instance.IsGameInProgress()) {
+            if (Input.GetMouseButtonDown(0)) {
+                if (IsMouseOverCollider()) {
+                    if (GameInputManager.Instance.GetLetterPressed() == bubbleLetterGen.GetLetter()) {
+                        BubbleSpawner.Instance.DecrementBubbleCount();
+                        ScoreManager.Instance.IncrementGameScore(BubbleSO.scoreCount);
+                        ScoreManager.Instance.IncrementBubblePopped();
 
-                    PlayDestroyAnim();
+                        PlayDestroyAnim();
+                    }
                 }
             }
+        } else {
+            PlayDestroyAnim();
         }
     }
 
@@ -45,9 +49,9 @@ public class BubbleTrigger : MonoBehaviour {
             BubbleSpawner.Instance.DecrementBubbleCount();
             GameManager.Instance.DecrementHealth();
             
-            PlayDestroyAnim();
             GetComponent<CircleCollider2D>().enabled = false;
             hasCollided = true;
+            DestroyBubble();
         }
     }
 
