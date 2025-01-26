@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance { get; private set; }
 
     public event EventHandler OnStateChanged;
+    public event EventHandler OnHealthDecrement;
 
     public enum State {
         WaitingToStart,
@@ -17,10 +18,8 @@ public class GameManager : MonoBehaviour {
     private State state;
 
     private int Health = 3;
-    private float timer = 60f;
-    private float countdownTimer = 3f;
-
-    private bool timeRunning = false;
+    private float gameTimer = 60f;
+    private float countdownTimer = 4f;
 
     private void Awake() {
         if (Instance == null) {
@@ -40,6 +39,7 @@ public class GameManager : MonoBehaviour {
     private void GameInputManager_OnSpacePressed(object sender, EventArgs e) {
         if (state == State.WaitingToStart) {
             state = State.CountDownToStart;
+            OnStateChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 
@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour {
 
             case State.CountDownToStart:
                 Debug.Log("State: CountDownToStart");
+
                 countdownTimer -= Time.deltaTime;
                 if (countdownTimer <= 0f) {
                     state = State.GameInProgress;
@@ -58,21 +59,29 @@ public class GameManager : MonoBehaviour {
                 break;
 
             case State.GameInProgress:
-                timer -= Time.deltaTime;
-                if (timer <= 0f) {
-                    Debug.Log("State: GameInProgress");
+                Debug.Log("State: GameInProgress");
+
+                gameTimer -= Time.deltaTime;
+                if (gameTimer <= 0f) {
+                    state = State.GameOver;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
+                }
+
+                if (Health <= 0) {
                     state = State.GameOver;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
                 break;
 
             case State.GameOver:
+                Debug.Log("State: GameOver");
                 break;
         }
     }
 
     public void DecrementHealth() {
         Health--;
+        OnHealthDecrement?.Invoke(this, EventArgs.Empty);
     }
 
     public bool IsWaitingToStart() {
@@ -89,5 +98,9 @@ public class GameManager : MonoBehaviour {
 
     public bool IsGameOver() {
         return state == State.GameOver;
+    }
+
+    public float GetGameTimer() {
+        return gameTimer;
     }
 }

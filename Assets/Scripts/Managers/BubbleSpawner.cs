@@ -28,9 +28,15 @@ public class BubbleSpawner : MonoBehaviour {
         GameManager.Instance.OnStateChanged += GameManager_OnStateChanged;
     }
 
+    private void Update() {
+        UpdateSpawnInterval();
+    }
+
     private void GameManager_OnStateChanged(object sender, System.EventArgs e) {
         if (GameManager.Instance.IsGameInProgress()) {
             StartCoroutine(SpawnBubblesInterval());
+        } else {
+            StopAllCoroutines();
         }
     }
 
@@ -97,6 +103,24 @@ public class BubbleSpawner : MonoBehaviour {
         }
 
         return null;
+    }
+
+    private void UpdateSpawnInterval() {
+        if (GameManager.Instance.IsGameInProgress()) {
+            float currentTimer = GameManager.Instance.GetGameTimer();
+
+            if (currentTimer > 50f && currentTimer <= 60f) {
+                spawnInterval = 2f;
+            } else if (currentTimer > 40f && currentTimer <= 50f) {
+                spawnInterval = 1.8f;
+            } else if (currentTimer > 30f && currentTimer <= 40f) {
+                spawnInterval = 1.5f;
+            } else if (currentTimer > 20f && currentTimer <= 30f) {
+                spawnInterval = 1.3f;
+            } else if (currentTimer > 10f && currentTimer <= 20f) {
+                spawnInterval = 1f;
+            }
+        }
     }
 
     public void DecrementBubbleCount() {
