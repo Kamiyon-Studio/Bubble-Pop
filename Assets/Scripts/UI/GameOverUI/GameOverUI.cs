@@ -20,6 +20,14 @@ public class GameOverUI : MonoBehaviour {
         score = ScoreManager.Instance.GetGameScore();
 
         UpdateTexts();
+
+        retryButton.onClick.AddListener(() => {
+            SceneLoaderManager.LoadScene(SceneLoaderManager.Scene.GameScene);
+        });
+
+        mainMenuButtonl.onClick.AddListener(() => {
+            SceneLoaderManager.LoadScene(SceneLoaderManager.Scene.MainMenuScene);
+        });
     }
 
     private void UpdateTexts() {
