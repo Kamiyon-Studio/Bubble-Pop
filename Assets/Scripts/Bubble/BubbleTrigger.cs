@@ -51,6 +51,7 @@ public class BubbleTrigger : MonoBehaviour {
                         ScoreManager.Instance.IncrementGameScore(BubbleSO.scoreCount);
                         ScoreManager.Instance.IncrementBubblePopped();
 
+                        GetComponent<CircleCollider2D>().enabled = false;
                         PlayDestroyAnim();
                     }
                 }

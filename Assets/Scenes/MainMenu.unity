@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 650420469}
   - component: {fileID: 650420471}
   - component: {fileID: 650420470}
+  - component: {fileID: 650420472}
   m_Layer: 5
   m_Name: Credits Panel
   m_TagString: Untagged
@@ -864,6 +865,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650420468}
   m_CullTransparentMesh: 1
+--- !u!114 &650420472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650420468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73280c3bd9c0044d9c815d19a6646a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &677963908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1525,8 @@ MonoBehaviour:
   playButton: {fileID: 1189091499}
   creditsButton: {fileID: 931633079}
   quitButton: {fileID: 1245140201}
+  creaditsPanel: {fileID: 650420468}
+  creditsCloseButton: {fileID: 140854079}
 --- !u!1 &1569892298
 GameObject:
   m_ObjectHideFlags: 0
