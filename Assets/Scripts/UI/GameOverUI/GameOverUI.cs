@@ -24,6 +24,6 @@ public class GameOverUI : MonoBehaviour {
 
     private void UpdateTexts() {
         scoreText.text = score.ToString();
-        bubblePoppedText.text = bubblePopped.ToString();
+        bubblePoppedText.text = "x " + bubblePopped.ToString();
     }
 }
