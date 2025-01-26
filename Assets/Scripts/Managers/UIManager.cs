@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour {
     public GameObject pressStartUI;
     public GameObject countDownUI;
     public GameObject BottomUIPanel;
+    public GameObject gameOverUI;
 
     [Header("UI Bottom Panel Elements")]
     public TextMeshProUGUI poppedBubbleCounterText;
@@ -38,6 +39,7 @@ public class UIManager : MonoBehaviour {
     private void GameManager_OnStateChanged(object sender, System.EventArgs e) {
         EnablePressStartUI();
         EnableCountDownUI();
+        EnableGameOverUI();
     }
 
     private void Update() {
@@ -53,11 +55,22 @@ public class UIManager : MonoBehaviour {
         }
     }
 
+    // ------------------------------- CountDownUI -------------------------------
+
     private void EnableCountDownUI() {
         if (GameManager.Instance.IsCountDownToStart()) {
             countDownUI.SetActive(true);
         } else {
             countDownUI.SetActive(false);
+        }
+    }
+
+    // ------------------------------- GameOverUI -------------------------------
+    private void EnableGameOverUI() {
+        if (GameManager.Instance.IsGameOver()) {
+            gameOverUI.SetActive(true);
+        } else {
+            gameOverUI.SetActive(false);
         }
     }
 

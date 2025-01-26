@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour {
     private float gameTimer = 60f;
     private float countdownTimer = 4f;
 
-    private bool timeRunning = false;
-
     private void Awake() {
         if (Instance == null) {
             Instance = this;

@@ -40,6 +40,7 @@ public class BubbleTrigger : MonoBehaviour {
                 }
             }
         } else {
+            bubbleSFX.MuteAudioSource();
             PlayDestroyAnim();
         }
     }
@@ -48,7 +49,7 @@ public class BubbleTrigger : MonoBehaviour {
         if (collision.GetComponent<BubbleBoundaryManager>() != null && !hasCollided) {
             BubbleSpawner.Instance.DecrementBubbleCount();
             GameManager.Instance.DecrementHealth();
-            
+
             GetComponent<CircleCollider2D>().enabled = false;
             hasCollided = true;
             DestroyBubble();
