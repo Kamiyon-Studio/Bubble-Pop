@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoaderManager : MonoBehaviour {
     public enum Scene {
-        MainMenuScene,
+        MainMenu,
         GameScene,
     }
 

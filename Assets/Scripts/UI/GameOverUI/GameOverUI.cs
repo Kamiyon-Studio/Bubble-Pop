@@ -26,7 +26,7 @@ public class GameOverUI : MonoBehaviour {
         });
 
         mainMenuButtonl.onClick.AddListener(() => {
-            SceneLoaderManager.LoadScene(SceneLoaderManager.Scene.MainMenuScene);
+            SceneLoaderManager.LoadScene(SceneLoaderManager.Scene.MainMenu);
         });
     }
 
