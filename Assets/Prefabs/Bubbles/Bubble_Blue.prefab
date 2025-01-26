@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _upwardSpeed: 2.5
-  _sidewaysSpeed: 1
+  _sidewaysSpeed: 1.5
   _sidewaysChangeInterval: 1
 --- !u!95 &4997422346510337809
 Animator:
